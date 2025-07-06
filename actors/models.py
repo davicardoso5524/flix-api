@@ -1,9 +1,11 @@
 from django.db import models
 
+
 NATIONALITY_CHOICES = (
     ('USA', 'Estados Unidos'),
     ('BRAZIL', 'Brasil'),
 )
+
 
 class Actor(models.Model):
     name = models.CharField(max_length=200)
@@ -14,6 +16,6 @@ class Actor(models.Model):
         blank=True,
         null=True
     )
+
     def __str__(self):
         return self.name
-    
